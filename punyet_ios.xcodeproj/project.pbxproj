@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		CC267B8D2C0A213200CF4523 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC267B8C2C0A213200CF4523 /* AppDelegate.swift */; };
 		CC267B8F2C0A213200CF4523 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC267B8E2C0A213200CF4523 /* SceneDelegate.swift */; };
-		CC267B912C0A213200CF4523 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC267B902C0A213200CF4523 /* ViewController.swift */; };
-		CC267B942C0A213200CF4523 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CC267B932C0A213200CF4523 /* Base */; };
 		CC267B962C0A213300CF4523 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC267B952C0A213300CF4523 /* Assets.xcassets */; };
 		CC267B992C0A213300CF4523 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CC267B982C0A213300CF4523 /* Base */; };
+		CCB10E522C0DBD5A00C58C10 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCB10E4E2C0DBD5A00C58C10 /* Roboto-Bold.ttf */; };
+		CCB10E532C0DBD5A00C58C10 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCB10E4F2C0DBD5A00C58C10 /* Roboto-Medium.ttf */; };
+		CCB10E542C0DBD5A00C58C10 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCB10E502C0DBD5A00C58C10 /* Roboto-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CC267B892C0A213200CF4523 /* punyet_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = punyet_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC267B8C2C0A213200CF4523 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC267B8E2C0A213200CF4523 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CC267B902C0A213200CF4523 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CC267B932C0A213200CF4523 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC267B952C0A213300CF4523 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC267B982C0A213300CF4523 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC267B9A2C0A213300CF4523 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCB10E4E2C0DBD5A00C58C10 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		CCB10E4F2C0DBD5A00C58C10 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		CCB10E502C0DBD5A00C58C10 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,88 @@
 		CC267B8B2C0A213200CF4523 /* punyet_ios */ = {
 			isa = PBXGroup;
 			children = (
-				CC267B8C2C0A213200CF4523 /* AppDelegate.swift */,
-				CC267B8E2C0A213200CF4523 /* SceneDelegate.swift */,
-				CC267B902C0A213200CF4523 /* ViewController.swift */,
-				CC267B922C0A213200CF4523 /* Main.storyboard */,
-				CC267B952C0A213300CF4523 /* Assets.xcassets */,
-				CC267B972C0A213300CF4523 /* LaunchScreen.storyboard */,
+				CCB10E4C2C0DBD2900C58C10 /* Resources */,
+				CCB10E462C0DBC3B00C58C10 /* Presentation */,
 				CC267B9A2C0A213300CF4523 /* Info.plist */,
 			);
 			path = punyet_ios;
+			sourceTree = "<group>";
+		};
+		CCB10E462C0DBC3B00C58C10 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CCB10E472C0DBC4300C58C10 /* App */,
+				CCB10E482C0DBC7200C58C10 /* Modules */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		CCB10E472C0DBC4300C58C10 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CC267B8C2C0A213200CF4523 /* AppDelegate.swift */,
+				CC267B8E2C0A213200CF4523 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CCB10E482C0DBC7200C58C10 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CCB10E492C0DBCE800C58C10 /* ListPlayers */,
+				CCB10E4A2C0DBCF200C58C10 /* CoinsSelection */,
+				CCB10E4B2C0DBCFF00C58C10 /* TotalCoins */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CCB10E492C0DBCE800C58C10 /* ListPlayers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ListPlayers;
+			sourceTree = "<group>";
+		};
+		CCB10E4A2C0DBCF200C58C10 /* CoinsSelection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoinsSelection;
+			sourceTree = "<group>";
+		};
+		CCB10E4B2C0DBCFF00C58C10 /* TotalCoins */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TotalCoins;
+			sourceTree = "<group>";
+		};
+		CCB10E4C2C0DBD2900C58C10 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CCB10E4D2C0DBD3800C58C10 /* Fonts */,
+				CC267B952C0A213300CF4523 /* Assets.xcassets */,
+				CC267B972C0A213300CF4523 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CCB10E4D2C0DBD3800C58C10 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CCB10E512C0DBD5A00C58C10 /* Roboto */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CCB10E512C0DBD5A00C58C10 /* Roboto */ = {
+			isa = PBXGroup;
+			children = (
+				CCB10E4E2C0DBD5A00C58C10 /* Roboto-Bold.ttf */,
+				CCB10E4F2C0DBD5A00C58C10 /* Roboto-Medium.ttf */,
+				CCB10E502C0DBD5A00C58C10 /* Roboto-Regular.ttf */,
+			);
+			path = Roboto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +200,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCB10E532C0DBD5A00C58C10 /* Roboto-Medium.ttf in Resources */,
 				CC267B962C0A213300CF4523 /* Assets.xcassets in Resources */,
+				CCB10E542C0DBD5A00C58C10 /* Roboto-Regular.ttf in Resources */,
 				CC267B992C0A213300CF4523 /* Base in Resources */,
-				CC267B942C0A213200CF4523 /* Base in Resources */,
+				CCB10E522C0DBD5A00C58C10 /* Roboto-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +215,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC267B912C0A213200CF4523 /* ViewController.swift in Sources */,
 				CC267B8D2C0A213200CF4523 /* AppDelegate.swift in Sources */,
 				CC267B8F2C0A213200CF4523 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +223,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CC267B922C0A213200CF4523 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CC267B932C0A213200CF4523 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CC267B972C0A213300CF4523 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +364,6 @@
 				INFOPLIST_FILE = punyet_ios/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -323,7 +390,6 @@
 				INFOPLIST_FILE = punyet_ios/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
