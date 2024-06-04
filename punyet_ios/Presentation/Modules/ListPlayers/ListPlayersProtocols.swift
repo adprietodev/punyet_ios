@@ -13,9 +13,10 @@ protocol ListPlayersViewModelProtocol {
     func configureData()
     func getPlayers(are statePlayer: StatePlayer) -> [Player]
     func getTotalCoins() -> Int
+    func goToCoinSelection()
 
 }
 
 protocol ListPlayersRouterProtocol {
-    
+    func goToCoinSelection(players: [Player])
 }

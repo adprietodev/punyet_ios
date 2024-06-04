@@ -8,5 +8,14 @@
 import Foundation
 
 class ListPlayersRouter: ListPlayersRouterProtocol {
-    
+    let viewController: ListPlayersViewController
+
+    init(viewController: ListPlayersViewController) {
+        self.viewController = viewController
+    }
+
+    func goToCoinSelection(players: [Player]) {
+        let coinSelectionViewController = CoinSelectionBuilder().build(players: players)
+        viewController.navigationController?.pushViewController(coinSelectionViewController, animated: true)
+    }
 }

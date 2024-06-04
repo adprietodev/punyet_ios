@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="NumberCollectionViewCell" customModule="punyet_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZe-df-QWt">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EET-Dq-XPn">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EET-Dq-XPn" firstAttribute="leading" secondItem="fZe-df-QWt" secondAttribute="leading" id="J0C-uL-FNd"/>
+                            <constraint firstItem="EET-Dq-XPn" firstAttribute="top" secondItem="fZe-df-QWt" secondAttribute="top" id="Ofu-7t-QgK"/>
+                            <constraint firstAttribute="trailing" secondItem="EET-Dq-XPn" secondAttribute="trailing" id="aCN-5d-eau"/>
+                            <constraint firstAttribute="bottom" secondItem="EET-Dq-XPn" secondAttribute="bottom" id="dJS-h9-W5l"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fZe-df-QWt" secondAttribute="bottom" id="1lz-IO-dTo"/>
+                <constraint firstAttribute="trailing" secondItem="fZe-df-QWt" secondAttribute="trailing" id="2PU-uc-jaW"/>
+                <constraint firstItem="fZe-df-QWt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Abp-ms-x6e"/>
+                <constraint firstItem="fZe-df-QWt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Iv3-1L-cw4"/>
+            </constraints>
+            <connections>
+                <outlet property="numberContainerView" destination="fZe-df-QWt" id="BYK-f2-ID4"/>
+                <outlet property="numberLabel" destination="EET-Dq-XPn" id="jl5-RH-KXo"/>
+            </connections>
+            <point key="canvasLocation" x="50" y="-11"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

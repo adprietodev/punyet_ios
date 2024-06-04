@@ -27,7 +27,7 @@ class ListPlayersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.configureData()
-        configureView()
+        setupUI()
         configureTableView()
     }
 
@@ -35,8 +35,14 @@ class ListPlayersViewController: UIViewController {
         super.viewWillAppear(animated)
     }
 
+    // MARK: - IBActions
+    @IBAction func playOrNewPlayers(_ sender: Any) {
+        viewModel.goToCoinSelection()
+    }
+    
+
     // MARK: - Functions
-    func configureView() {
+    func setupUI() {
         navigationController?.navigationBar.isHidden = true
         switch viewModel.gameState {
         case .addPlayers:
