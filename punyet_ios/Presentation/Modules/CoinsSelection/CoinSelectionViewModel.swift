@@ -41,7 +41,6 @@ class CoinSelectionViewModel: CoinSelectionViewModelProtocol {
             if players[indexNextPlayer].statePlayer == .playing {
                 name = players[indexNextPlayer].name
             }
-            print("Entramos al bucle while \(players[indexNextPlayer].statePlayer) - \(indexNextPlayer)")
             if players.count-1 != indexNextPlayer {
                 indexNextPlayer += 1
             } else {
