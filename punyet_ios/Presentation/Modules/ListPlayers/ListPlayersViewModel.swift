@@ -21,7 +21,7 @@ class ListPlayersViewModel: ListPlayersViewModelProtocol {
             Player(name: "Adrián", statePlayer: .playing),
             Player(name: "Ruben", statePlayer: .playing),
             Player(name: "Miguel", statePlayer: .cassified),
-            Player(name: "Demetrio", statePlayer: .playing)
+            Player(name: "Demetrio", statePlayer: .cassified)
         ]
     }
 
@@ -43,5 +43,9 @@ class ListPlayersViewModel: ListPlayersViewModelProtocol {
 
     func getTotalCoins() -> Int {
         players.count * 3
+    }
+
+    func goToCoinSelection() {
+        router.goToCoinSelection(players: players)
     }
 }
