@@ -17,8 +17,6 @@ class ListPlayersViewController: UIViewController {
     @IBOutlet weak var winOrPayImageView: UIImageView!
     @IBOutlet weak var roundView: UIView!
     @IBOutlet weak var roundLabel: UILabel!
-    @IBOutlet weak var playAgainView: UIView!
-    @IBOutlet weak var playAgainLabel: UILabel!
     
     // MARK: - Properties
     var viewModel: ListPlayersViewModelProtocol!
@@ -55,19 +53,13 @@ class ListPlayersViewController: UIViewController {
             winOrPayLabel.text = "Te toca pagar Adrián"
             winOrPayLabel.textColor = .yaleBlue
             winOrPayLabel.font = .robotoMedium(with: 24)
-            titlePlayButtonLabel.text = "NUEVOS JUGADORES"
-            playAgainLabel.text = "VOLVER A JUGAR"
+            titlePlayButtonLabel.text = "VOLVER AL MENÚ"
             titlePlayButtonLabel.textColor = .yaleBlue
-            playAgainView.isHidden = false
         }
         roundView.layer.cornerRadius = 6
         roundView.backgroundColor = .goldenYellow
         roundLabel.textColor = .yaleBlue
         roundLabel.font = .robotoBold(with: 20)
-        playAgainView.layer.cornerRadius = 6
-        playAgainView.backgroundColor = .goldenYellow
-        playAgainLabel.textColor = .yaleBlue
-        playAgainLabel.font = .robotoBold(with: 20)
     }
 
     func configureTableView() {

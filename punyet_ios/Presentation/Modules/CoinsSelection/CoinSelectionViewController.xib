@@ -52,6 +52,9 @@
                             <rect key="frame" x="0.0" y="0.0" width="361" height="42"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain"/>
+                            <connections>
+                                <action selector="nextPlayer:" destination="-1" eventType="touchUpInside" id="TwN-Kk-cLL"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>

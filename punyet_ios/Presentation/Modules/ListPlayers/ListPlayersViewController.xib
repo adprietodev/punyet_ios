@@ -10,8 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListPlayersViewController" customModule="punyet_ios" customModuleProvider="target">
             <connections>
-                <outlet property="playAgainLabel" destination="2Dp-W7-rYC" id="dkI-E1-1L1"/>
-                <outlet property="playAgainView" destination="X9g-Wh-fvD" id="67v-hM-3Zt"/>
                 <outlet property="playersTableView" destination="2tQ-IT-yv7" id="DGH-Wv-WmJ"/>
                 <outlet property="roundLabel" destination="g8C-cR-wgM" id="rRZ-gV-Lel"/>
                 <outlet property="roundView" destination="roC-eV-rpf" id="3oO-W7-pK4"/>
@@ -36,31 +34,6 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kh7-F7-Gkc">
                     <rect key="frame" x="16" y="736" width="361" height="82"/>
                     <subviews>
-                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9g-Wh-fvD">
-                            <rect key="frame" x="0.0" y="-42" width="361" height="42"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Dp-W7-rYC">
-                                    <rect key="frame" x="180.66666666666666" y="21" width="0.0" height="0.0"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIP-Ab-0tE">
-                                    <rect key="frame" x="0.0" y="0.0" width="361" height="42"/>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstItem="TIP-Ab-0tE" firstAttribute="leading" secondItem="X9g-Wh-fvD" secondAttribute="leading" id="1Lz-rm-VQQ"/>
-                                <constraint firstItem="2Dp-W7-rYC" firstAttribute="centerY" secondItem="X9g-Wh-fvD" secondAttribute="centerY" id="FWS-p7-VXr"/>
-                                <constraint firstItem="TIP-Ab-0tE" firstAttribute="top" secondItem="X9g-Wh-fvD" secondAttribute="top" id="UeT-we-pJk"/>
-                                <constraint firstItem="2Dp-W7-rYC" firstAttribute="centerX" secondItem="X9g-Wh-fvD" secondAttribute="centerX" id="agu-Wr-iFZ"/>
-                                <constraint firstAttribute="trailing" secondItem="TIP-Ab-0tE" secondAttribute="trailing" id="ckL-8g-dQ6"/>
-                                <constraint firstAttribute="bottom" secondItem="TIP-Ab-0tE" secondAttribute="bottom" id="nyl-lb-WEp"/>
-                                <constraint firstAttribute="height" constant="42" id="sPx-bb-jhF"/>
-                            </constraints>
-                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="roC-eV-rpf">
                             <rect key="frame" x="0.0" y="0.0" width="361" height="42"/>
                             <subviews>
