@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddPlayerTableViewCell" id="KGk-i7-Jjw" customClass="AddPlayerTableViewCell" customModule="punyet_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="24"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="24"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="AWH-YZ-afR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="24"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FTe-bA-uoh">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="24"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nuevo jugador..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LYR-a4-ZYV">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TKt-Nv-kfa">
+                                        <rect key="frame" x="0.0" y="23" width="240" height="1"/>
+                                        <color key="backgroundColor" name="YaleBlue"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="12N-Nc-iRU"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9C-j1-XG1">
+                                <rect key="frame" x="256" y="0.0" width="64" height="24"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Añadir" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upH-fq-LYJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMP-nO-Yig">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="24"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="addPlayer:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uwl-mh-Mgv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="pMP-nO-Yig" firstAttribute="top" secondItem="U9C-j1-XG1" secondAttribute="top" id="2NN-e6-TJx"/>
+                                    <constraint firstAttribute="bottom" secondItem="pMP-nO-Yig" secondAttribute="bottom" id="NMN-LN-Cb1"/>
+                                    <constraint firstAttribute="width" constant="64" id="Q5K-aR-kIQ"/>
+                                    <constraint firstItem="upH-fq-LYJ" firstAttribute="top" secondItem="U9C-j1-XG1" secondAttribute="top" id="QTi-vl-ABZ"/>
+                                    <constraint firstItem="pMP-nO-Yig" firstAttribute="leading" secondItem="U9C-j1-XG1" secondAttribute="leading" id="aCZ-tY-lcF"/>
+                                    <constraint firstAttribute="bottom" secondItem="upH-fq-LYJ" secondAttribute="bottom" id="ahO-9p-blp"/>
+                                    <constraint firstAttribute="trailing" secondItem="pMP-nO-Yig" secondAttribute="trailing" id="g6P-5N-qmw"/>
+                                    <constraint firstAttribute="trailing" secondItem="upH-fq-LYJ" secondAttribute="trailing" id="l5i-MR-vxG"/>
+                                    <constraint firstItem="upH-fq-LYJ" firstAttribute="leading" secondItem="U9C-j1-XG1" secondAttribute="leading" id="mQL-aJ-OG5"/>
+                                    <constraint firstAttribute="height" constant="24" id="yvT-OZ-dNg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="AWH-YZ-afR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2VZ-jP-m2f"/>
+                    <constraint firstAttribute="trailing" secondItem="AWH-YZ-afR" secondAttribute="trailing" id="NJg-IV-bY2"/>
+                    <constraint firstAttribute="bottom" secondItem="AWH-YZ-afR" secondAttribute="bottom" id="be7-w6-NEb"/>
+                    <constraint firstItem="AWH-YZ-afR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qoP-Cr-MdF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addPlayerLabel" destination="upH-fq-LYJ" id="osr-1O-2ts"/>
+                <outlet property="addPlayerTextField" destination="LYR-a4-ZYV" id="yZ3-zE-UUR"/>
+                <outlet property="addPlayerView" destination="U9C-j1-XG1" id="QMb-ZJ-BPn"/>
+            </connections>
+            <point key="canvasLocation" x="-159" y="-123"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="YaleBlue">
+            <color red="0.0" green="0.16078431372549021" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

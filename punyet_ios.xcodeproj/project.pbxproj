@@ -11,9 +11,39 @@
 		CC267B8F2C0A213200CF4523 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC267B8E2C0A213200CF4523 /* SceneDelegate.swift */; };
 		CC267B962C0A213300CF4523 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC267B952C0A213300CF4523 /* Assets.xcassets */; };
 		CC267B992C0A213300CF4523 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CC267B982C0A213300CF4523 /* Base */; };
+		CC5BC5412C0EFFAE00936ABE /* CoinSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5BC53F2C0EFFAE00936ABE /* CoinSelectionViewController.swift */; };
+		CC5BC5422C0EFFAE00936ABE /* CoinSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC5BC5402C0EFFAE00936ABE /* CoinSelectionViewController.xib */; };
+		CC5BC5442C0F012B00936ABE /* CoinSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5BC5432C0F012B00936ABE /* CoinSelectionViewModel.swift */; };
+		CC5BC5462C0F014100936ABE /* CoinSelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5BC5452C0F014100936ABE /* CoinSelectionRouter.swift */; };
+		CC5BC5482C0F015600936ABE /* CoinSelectionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5BC5472C0F015600936ABE /* CoinSelectionBuilder.swift */; };
+		CC5BC54A2C0F016C00936ABE /* CoinSelectionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5BC5492C0F016C00936ABE /* CoinSelectionProtocols.swift */; };
+		CC5BC54E2C0F070700936ABE /* NumberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5BC54C2C0F070700936ABE /* NumberCollectionViewCell.swift */; };
+		CC5BC54F2C0F070700936ABE /* NumberCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC5BC54D2C0F070700936ABE /* NumberCollectionViewCell.xib */; };
 		CCB10E522C0DBD5A00C58C10 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCB10E4E2C0DBD5A00C58C10 /* Roboto-Bold.ttf */; };
 		CCB10E532C0DBD5A00C58C10 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCB10E4F2C0DBD5A00C58C10 /* Roboto-Medium.ttf */; };
 		CCB10E542C0DBD5A00C58C10 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCB10E502C0DBD5A00C58C10 /* Roboto-Regular.ttf */; };
+		CCD2E3332C0DCB9C00071AB8 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2E3322C0DCB9C00071AB8 /* GameState.swift */; };
+		CCD2E3362C0DCC4200071AB8 /* ListPlayersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCD2E3352C0DCC4200071AB8 /* ListPlayersViewController.xib */; };
+		CCD2E3372C0DCC4200071AB8 /* ListPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2E3342C0DCC4200071AB8 /* ListPlayersViewController.swift */; };
+		CCD2E33B2C0DCD7300071AB8 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2E33A2C0DCD7300071AB8 /* Player.swift */; };
+		CCD2E33D2C0DD33700071AB8 /* ListPlayersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2E33C2C0DD33700071AB8 /* ListPlayersViewModel.swift */; };
+		CCD2E33F2C0DD3E000071AB8 /* ListPlayersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2E33E2C0DD3E000071AB8 /* ListPlayersRouter.swift */; };
+		CCD2E3412C0DD3F400071AB8 /* ListPlayersBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2E3402C0DD3F300071AB8 /* ListPlayersBuilder.swift */; };
+		CCD2E3432C0DD4B200071AB8 /* ListPlayersProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2E3422C0DD4B200071AB8 /* ListPlayersProtocols.swift */; };
+		CCD2E3452C0DD5B200071AB8 /* TypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2E3442C0DD5B200071AB8 /* TypeCell.swift */; };
+		CCD2E34B2C0DF33C00071AB8 /* AddPlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCD2E34A2C0DF33C00071AB8 /* AddPlayerTableViewCell.xib */; };
+		CCD2E34C2C0DF33C00071AB8 /* AddPlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2E3492C0DF33C00071AB8 /* AddPlayerTableViewCell.swift */; };
+		CCD2E3502C0DF38400071AB8 /* TotalCoinsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCD2E34F2C0DF38400071AB8 /* TotalCoinsTableViewCell.xib */; };
+		CCD2E3512C0DF38400071AB8 /* TotalCoinsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2E34E2C0DF38400071AB8 /* TotalCoinsTableViewCell.swift */; };
+		CCD2E3552C0DF46F00071AB8 /* PlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCD2E3542C0DF46F00071AB8 /* PlayerTableViewCell.xib */; };
+		CCD2E3562C0DF46F00071AB8 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2E3532C0DF46F00071AB8 /* PlayerTableViewCell.swift */; };
+		CCD2E3592C0DF94300071AB8 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2E3582C0DF94300071AB8 /* Font.swift */; };
+		CCEE295E2C1042DF00A5DAC6 /* TotalCoinsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEE295C2C1042DF00A5DAC6 /* TotalCoinsViewController.swift */; };
+		CCEE295F2C1042DF00A5DAC6 /* TotalCoinsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCEE295D2C1042DF00A5DAC6 /* TotalCoinsViewController.xib */; };
+		CCEE29612C10431500A5DAC6 /* TotalCoinsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEE29602C10431500A5DAC6 /* TotalCoinsViewModel.swift */; };
+		CCEE29632C10432600A5DAC6 /* TotalCoinsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEE29622C10432600A5DAC6 /* TotalCoinsRouter.swift */; };
+		CCEE29652C10434700A5DAC6 /* TotalCoinsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEE29642C10434700A5DAC6 /* TotalCoinsBuilder.swift */; };
+		CCEE29672C10435600A5DAC6 /* TotalCoinsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEE29662C10435600A5DAC6 /* TotalCoinsProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +53,39 @@
 		CC267B952C0A213300CF4523 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC267B982C0A213300CF4523 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC267B9A2C0A213300CF4523 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC5BC53F2C0EFFAE00936ABE /* CoinSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSelectionViewController.swift; sourceTree = "<group>"; };
+		CC5BC5402C0EFFAE00936ABE /* CoinSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinSelectionViewController.xib; sourceTree = "<group>"; };
+		CC5BC5432C0F012B00936ABE /* CoinSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSelectionViewModel.swift; sourceTree = "<group>"; };
+		CC5BC5452C0F014100936ABE /* CoinSelectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSelectionRouter.swift; sourceTree = "<group>"; };
+		CC5BC5472C0F015600936ABE /* CoinSelectionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSelectionBuilder.swift; sourceTree = "<group>"; };
+		CC5BC5492C0F016C00936ABE /* CoinSelectionProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSelectionProtocols.swift; sourceTree = "<group>"; };
+		CC5BC54C2C0F070700936ABE /* NumberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCollectionViewCell.swift; sourceTree = "<group>"; };
+		CC5BC54D2C0F070700936ABE /* NumberCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberCollectionViewCell.xib; sourceTree = "<group>"; };
 		CCB10E4E2C0DBD5A00C58C10 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		CCB10E4F2C0DBD5A00C58C10 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		CCB10E502C0DBD5A00C58C10 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		CCD2E3322C0DCB9C00071AB8 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		CCD2E3342C0DCC4200071AB8 /* ListPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlayersViewController.swift; sourceTree = "<group>"; };
+		CCD2E3352C0DCC4200071AB8 /* ListPlayersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListPlayersViewController.xib; sourceTree = "<group>"; };
+		CCD2E33A2C0DCD7300071AB8 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		CCD2E33C2C0DD33700071AB8 /* ListPlayersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlayersViewModel.swift; sourceTree = "<group>"; };
+		CCD2E33E2C0DD3E000071AB8 /* ListPlayersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlayersRouter.swift; sourceTree = "<group>"; };
+		CCD2E3402C0DD3F300071AB8 /* ListPlayersBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlayersBuilder.swift; sourceTree = "<group>"; };
+		CCD2E3422C0DD4B200071AB8 /* ListPlayersProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlayersProtocols.swift; sourceTree = "<group>"; };
+		CCD2E3442C0DD5B200071AB8 /* TypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCell.swift; sourceTree = "<group>"; };
+		CCD2E3492C0DF33C00071AB8 /* AddPlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerTableViewCell.swift; sourceTree = "<group>"; };
+		CCD2E34A2C0DF33C00071AB8 /* AddPlayerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPlayerTableViewCell.xib; sourceTree = "<group>"; };
+		CCD2E34E2C0DF38400071AB8 /* TotalCoinsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCoinsTableViewCell.swift; sourceTree = "<group>"; };
+		CCD2E34F2C0DF38400071AB8 /* TotalCoinsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalCoinsTableViewCell.xib; sourceTree = "<group>"; };
+		CCD2E3532C0DF46F00071AB8 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
+		CCD2E3542C0DF46F00071AB8 /* PlayerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerTableViewCell.xib; sourceTree = "<group>"; };
+		CCD2E3582C0DF94300071AB8 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		CCEE295C2C1042DF00A5DAC6 /* TotalCoinsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCoinsViewController.swift; sourceTree = "<group>"; };
+		CCEE295D2C1042DF00A5DAC6 /* TotalCoinsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalCoinsViewController.xib; sourceTree = "<group>"; };
+		CCEE29602C10431500A5DAC6 /* TotalCoinsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCoinsViewModel.swift; sourceTree = "<group>"; };
+		CCEE29622C10432600A5DAC6 /* TotalCoinsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCoinsRouter.swift; sourceTree = "<group>"; };
+		CCEE29642C10434700A5DAC6 /* TotalCoinsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCoinsBuilder.swift; sourceTree = "<group>"; };
+		CCEE29662C10435600A5DAC6 /* TotalCoinsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCoinsProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +118,23 @@
 		CC267B8B2C0A213200CF4523 /* punyet_ios */ = {
 			isa = PBXGroup;
 			children = (
-				CCB10E4C2C0DBD2900C58C10 /* Resources */,
+				CCD2E3462C0DF2F400071AB8 /* Commons */,
+				CCD2E3302C0DCB0600071AB8 /* Helpers */,
+				CCD2E3382C0DCD5F00071AB8 /* Domain */,
 				CCB10E462C0DBC3B00C58C10 /* Presentation */,
+				CCB10E4C2C0DBD2900C58C10 /* Resources */,
 				CC267B9A2C0A213300CF4523 /* Info.plist */,
 			);
 			path = punyet_ios;
+			sourceTree = "<group>";
+		};
+		CC5BC54B2C0F06D900936ABE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CC5BC54C2C0F070700936ABE /* NumberCollectionViewCell.swift */,
+				CC5BC54D2C0F070700936ABE /* NumberCollectionViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		CCB10E462C0DBC3B00C58C10 /* Presentation */ = {
@@ -96,6 +168,12 @@
 		CCB10E492C0DBCE800C58C10 /* ListPlayers */ = {
 			isa = PBXGroup;
 			children = (
+				CCD2E3342C0DCC4200071AB8 /* ListPlayersViewController.swift */,
+				CCD2E3352C0DCC4200071AB8 /* ListPlayersViewController.xib */,
+				CCD2E33C2C0DD33700071AB8 /* ListPlayersViewModel.swift */,
+				CCD2E33E2C0DD3E000071AB8 /* ListPlayersRouter.swift */,
+				CCD2E3402C0DD3F300071AB8 /* ListPlayersBuilder.swift */,
+				CCD2E3422C0DD4B200071AB8 /* ListPlayersProtocols.swift */,
 			);
 			path = ListPlayers;
 			sourceTree = "<group>";
@@ -103,6 +181,13 @@
 		CCB10E4A2C0DBCF200C58C10 /* CoinsSelection */ = {
 			isa = PBXGroup;
 			children = (
+				CC5BC54B2C0F06D900936ABE /* Cells */,
+				CC5BC53F2C0EFFAE00936ABE /* CoinSelectionViewController.swift */,
+				CC5BC5402C0EFFAE00936ABE /* CoinSelectionViewController.xib */,
+				CC5BC5432C0F012B00936ABE /* CoinSelectionViewModel.swift */,
+				CC5BC5452C0F014100936ABE /* CoinSelectionRouter.swift */,
+				CC5BC5472C0F015600936ABE /* CoinSelectionBuilder.swift */,
+				CC5BC5492C0F016C00936ABE /* CoinSelectionProtocols.swift */,
 			);
 			path = CoinsSelection;
 			sourceTree = "<group>";
@@ -110,6 +195,12 @@
 		CCB10E4B2C0DBCFF00C58C10 /* TotalCoins */ = {
 			isa = PBXGroup;
 			children = (
+				CCEE295C2C1042DF00A5DAC6 /* TotalCoinsViewController.swift */,
+				CCEE295D2C1042DF00A5DAC6 /* TotalCoinsViewController.xib */,
+				CCEE29602C10431500A5DAC6 /* TotalCoinsViewModel.swift */,
+				CCEE29622C10432600A5DAC6 /* TotalCoinsRouter.swift */,
+				CCEE29642C10434700A5DAC6 /* TotalCoinsBuilder.swift */,
+				CCEE29662C10435600A5DAC6 /* TotalCoinsProtocols.swift */,
 			);
 			path = TotalCoins;
 			sourceTree = "<group>";
@@ -140,6 +231,93 @@
 				CCB10E502C0DBD5A00C58C10 /* Roboto-Regular.ttf */,
 			);
 			path = Roboto;
+			sourceTree = "<group>";
+		};
+		CCD2E3302C0DCB0600071AB8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CCD2E3572C0DF90500071AB8 /* Extensions */,
+				CCD2E3312C0DCB0F00071AB8 /* Enums */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CCD2E3312C0DCB0F00071AB8 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				CCD2E3322C0DCB9C00071AB8 /* GameState.swift */,
+				CCD2E3442C0DD5B200071AB8 /* TypeCell.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		CCD2E3382C0DCD5F00071AB8 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				CCD2E3392C0DCD6400071AB8 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		CCD2E3392C0DCD6400071AB8 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CCD2E33A2C0DCD7300071AB8 /* Player.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		CCD2E3462C0DF2F400071AB8 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				CCD2E3472C0DF30300071AB8 /* CustomCells */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		CCD2E3472C0DF30300071AB8 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				CCD2E3482C0DF30E00071AB8 /* AddPlayer */,
+				CCD2E34D2C0DF36B00071AB8 /* TotalCoins */,
+				CCD2E3522C0DF3C000071AB8 /* Player */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		CCD2E3482C0DF30E00071AB8 /* AddPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				CCD2E3492C0DF33C00071AB8 /* AddPlayerTableViewCell.swift */,
+				CCD2E34A2C0DF33C00071AB8 /* AddPlayerTableViewCell.xib */,
+			);
+			path = AddPlayer;
+			sourceTree = "<group>";
+		};
+		CCD2E34D2C0DF36B00071AB8 /* TotalCoins */ = {
+			isa = PBXGroup;
+			children = (
+				CCD2E34E2C0DF38400071AB8 /* TotalCoinsTableViewCell.swift */,
+				CCD2E34F2C0DF38400071AB8 /* TotalCoinsTableViewCell.xib */,
+			);
+			path = TotalCoins;
+			sourceTree = "<group>";
+		};
+		CCD2E3522C0DF3C000071AB8 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				CCD2E3532C0DF46F00071AB8 /* PlayerTableViewCell.swift */,
+				CCD2E3542C0DF46F00071AB8 /* PlayerTableViewCell.xib */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		CCD2E3572C0DF90500071AB8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CCD2E3582C0DF94300071AB8 /* Font.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,10 +379,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCB10E532C0DBD5A00C58C10 /* Roboto-Medium.ttf in Resources */,
+				CCD2E3362C0DCC4200071AB8 /* ListPlayersViewController.xib in Resources */,
 				CC267B962C0A213300CF4523 /* Assets.xcassets in Resources */,
+				CCD2E34B2C0DF33C00071AB8 /* AddPlayerTableViewCell.xib in Resources */,
 				CCB10E542C0DBD5A00C58C10 /* Roboto-Regular.ttf in Resources */,
 				CC267B992C0A213300CF4523 /* Base in Resources */,
+				CC5BC54F2C0F070700936ABE /* NumberCollectionViewCell.xib in Resources */,
+				CC5BC5422C0EFFAE00936ABE /* CoinSelectionViewController.xib in Resources */,
+				CCEE295F2C1042DF00A5DAC6 /* TotalCoinsViewController.xib in Resources */,
 				CCB10E522C0DBD5A00C58C10 /* Roboto-Bold.ttf in Resources */,
+				CCD2E3502C0DF38400071AB8 /* TotalCoinsTableViewCell.xib in Resources */,
+				CCD2E3552C0DF46F00071AB8 /* PlayerTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,8 +400,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCD2E3592C0DF94300071AB8 /* Font.swift in Sources */,
+				CCD2E34C2C0DF33C00071AB8 /* AddPlayerTableViewCell.swift in Sources */,
+				CCEE29612C10431500A5DAC6 /* TotalCoinsViewModel.swift in Sources */,
+				CC5BC5442C0F012B00936ABE /* CoinSelectionViewModel.swift in Sources */,
+				CCD2E3332C0DCB9C00071AB8 /* GameState.swift in Sources */,
+				CCD2E3452C0DD5B200071AB8 /* TypeCell.swift in Sources */,
+				CC5BC54E2C0F070700936ABE /* NumberCollectionViewCell.swift in Sources */,
+				CCD2E3512C0DF38400071AB8 /* TotalCoinsTableViewCell.swift in Sources */,
+				CCEE29632C10432600A5DAC6 /* TotalCoinsRouter.swift in Sources */,
+				CCD2E33F2C0DD3E000071AB8 /* ListPlayersRouter.swift in Sources */,
+				CCD2E3372C0DCC4200071AB8 /* ListPlayersViewController.swift in Sources */,
+				CCD2E3562C0DF46F00071AB8 /* PlayerTableViewCell.swift in Sources */,
+				CC5BC5462C0F014100936ABE /* CoinSelectionRouter.swift in Sources */,
 				CC267B8D2C0A213200CF4523 /* AppDelegate.swift in Sources */,
+				CCEE29672C10435600A5DAC6 /* TotalCoinsProtocols.swift in Sources */,
+				CCD2E33B2C0DCD7300071AB8 /* Player.swift in Sources */,
+				CC5BC54A2C0F016C00936ABE /* CoinSelectionProtocols.swift in Sources */,
 				CC267B8F2C0A213200CF4523 /* SceneDelegate.swift in Sources */,
+				CCEE29652C10434700A5DAC6 /* TotalCoinsBuilder.swift in Sources */,
+				CC5BC5482C0F015600936ABE /* CoinSelectionBuilder.swift in Sources */,
+				CCD2E3412C0DD3F400071AB8 /* ListPlayersBuilder.swift in Sources */,
+				CC5BC5412C0EFFAE00936ABE /* CoinSelectionViewController.swift in Sources */,
+				CCD2E3432C0DD4B200071AB8 /* ListPlayersProtocols.swift in Sources */,
+				CCD2E33D2C0DD33700071AB8 /* ListPlayersViewModel.swift in Sources */,
+				CCEE295E2C1042DF00A5DAC6 /* TotalCoinsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +570,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = punyet_ios/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PUNYET;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -388,6 +597,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = punyet_ios/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PUNYET;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
