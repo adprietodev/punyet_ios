@@ -8,8 +8,8 @@
 import Foundation
 
 enum TypeCell: String {
-    case addPlayer = "Añadir Jugadores"
+    case addPlayer = "Añadir jugadores"
     case totalCoins = "Total de monedas"
-    case inGame = "Jugando"
+    case inGame = "En partida"
     case classified = "Clasificados"
 }
