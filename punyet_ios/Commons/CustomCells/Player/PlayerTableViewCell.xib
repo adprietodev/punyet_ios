@@ -34,19 +34,25 @@
                                         <rect key="frame" x="6.3333333333333162" y="7" width="19.666666666666671" height="19"/>
                                         <color key="tintColor" name="TangerineYellow"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RC4-Ga-3l7">
-                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RC4-Ga-3l7">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="removePlayer:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JhJ-Ou-tvl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="IBY-jM-YRd"/>
+                                    <constraint firstItem="RC4-Ga-3l7" firstAttribute="top" secondItem="sY7-99-OYL" secondAttribute="top" id="MRp-4R-Aal"/>
+                                    <constraint firstItem="RC4-Ga-3l7" firstAttribute="leading" secondItem="sY7-99-OYL" secondAttribute="leading" id="a8a-rX-0WH"/>
                                     <constraint firstItem="DPg-Zk-Lid" firstAttribute="centerY" secondItem="sY7-99-OYL" secondAttribute="centerY" id="dEF-hq-Lpx"/>
                                     <constraint firstItem="DPg-Zk-Lid" firstAttribute="centerX" secondItem="sY7-99-OYL" secondAttribute="centerX" id="pHg-6K-FmC"/>
+                                    <constraint firstAttribute="bottom" secondItem="RC4-Ga-3l7" secondAttribute="bottom" id="q9Q-eq-R3h"/>
                                     <constraint firstAttribute="width" constant="32" id="qA6-SL-4Dj"/>
+                                    <constraint firstAttribute="trailing" secondItem="RC4-Ga-3l7" secondAttribute="trailing" id="srs-iq-QDK"/>
                                 </constraints>
                             </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb2-j3-mHE">

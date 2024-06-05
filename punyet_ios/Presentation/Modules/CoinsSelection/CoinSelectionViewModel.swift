@@ -17,6 +17,7 @@ class CoinSelectionViewModel: CoinSelectionViewModelProtocol {
     var players: [Player]
     var numbersCoin = [NumberCoin]()
     var indexNextPlayer: Int = 0
+    var currentIndexPlayer: Int = 0
 
     init(router: CoinSelectionRouterProtocol, players: [Player]) {
         self.router = router
@@ -36,34 +37,37 @@ class CoinSelectionViewModel: CoinSelectionViewModelProtocol {
     }
 
     func getNamePlayer() -> String {
-        var name = ""
-        repeat {
-            if players[indexNextPlayer].statePlayer == .playing {
-                name = players[indexNextPlayer].name
-            }
-            if players.count-1 != indexNextPlayer {
+        while indexNextPlayer < players.count {
+            let player = players[indexNextPlayer]
+            if player.statePlayer == .playing {
+                currentIndexPlayer = indexNextPlayer
                 indexNextPlayer += 1
-            } else {
-                break
+                return player.name
             }
-        } while players[indexNextPlayer].statePlayer == .cassified
-        return name
+            indexNextPlayer += 1
+        }
+        return ""
     }
 
     func setTotalNumberCoinsAtCurrentPlayer(number: Int) {
-        if players[indexNextPlayer-1].totalNumberCoins != nil {
+        if players[currentIndexPlayer].totalNumberCoins != nil {
             for (index,numberCoin) in numbersCoin.enumerated() {
                 if numberCoin.number == players[indexNextPlayer-1].totalNumberCoins {
                     numbersCoin[index].isSelected = false
                 }
             }
-            players[indexNextPlayer-1].totalNumberCoins = nil
+            players[currentIndexPlayer].totalNumberCoins = nil
         }
         numbersCoin[number].isSelected = true
-        players[indexNextPlayer-1].totalNumberCoins = number
+        players[currentIndexPlayer].totalNumberCoins = number
+        
     }
 
     func isLastPlayerInGame(_ player: String) -> Bool {
         player == players.filter({$0.statePlayer == .playing}).last?.name
+    }
+
+    func goToTotalCoins() {
+        router.goToTotalCoins(players: players)
     }
 }

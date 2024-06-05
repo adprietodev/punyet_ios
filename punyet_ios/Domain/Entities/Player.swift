@@ -9,7 +9,7 @@ import Foundation
 
 enum StatePlayer {
     case playing
-    case cassified
+    case classified
 }
 
 class Player {

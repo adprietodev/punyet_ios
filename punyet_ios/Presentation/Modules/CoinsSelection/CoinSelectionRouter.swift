@@ -13,4 +13,9 @@ class CoinSelectionRouter: CoinSelectionRouterProtocol {
     init(viewController: CoinSelectionViewController) {
         self.viewController = viewController
     }
+
+    func goToTotalCoins(players: [Player]) {
+        let totalCoinsViewController = TotalCoinsBuilder().build(players: players)
+        viewController.navigationController?.pushViewController(totalCoinsViewController, animated: true)
+    }
 }

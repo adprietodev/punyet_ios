@@ -51,6 +51,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="24"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="addPlayer:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uwl-mh-Mgv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -83,7 +86,7 @@
                 <outlet property="addPlayerTextField" destination="LYR-a4-ZYV" id="yZ3-zE-UUR"/>
                 <outlet property="addPlayerView" destination="U9C-j1-XG1" id="QMb-ZJ-BPn"/>
             </connections>
-            <point key="canvasLocation" x="96" y="-156"/>
+            <point key="canvasLocation" x="-159" y="-123"/>
         </tableViewCell>
     </objects>
     <resources>

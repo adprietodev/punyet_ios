@@ -10,13 +10,12 @@ import UIKit
 class ListPlayersViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var playersTableView: UITableView!
-    @IBOutlet weak var titlePlayButtonView: UIView!
-    @IBOutlet weak var titlePlayButtonLabel: UILabel!
+    @IBOutlet weak var playOrPlayAgainView: UIView!
+    @IBOutlet weak var playOrPlayAgainLabel: UILabel!
+    @IBOutlet weak var playOrPlayAgainButton: UIButton!
     @IBOutlet weak var winOrPayView: UIStackView!
     @IBOutlet weak var winOrPayLabel: UILabel!
     @IBOutlet weak var winOrPayImageView: UIImageView!
-    @IBOutlet weak var roundView: UIView!
-    @IBOutlet weak var roundLabel: UILabel!
     
     // MARK: - Properties
     var viewModel: ListPlayersViewModelProtocol!
@@ -24,42 +23,85 @@ class ListPlayersViewController: UIViewController {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.configureData()
-        setupUI()
+        configureNavigation()
         configureTableView()
+        setupBindings()
+        disablePlayButton()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        viewModel.configureData()
+        setupUI()
+        playersTableView.reloadData()
     }
 
     // MARK: - IBActions
-    @IBAction func playOrNewPlayers(_ sender: Any) {
-        viewModel.goToCoinSelection()
+    @IBAction func playOrPlayAgain(_ sender: Any) {
+        viewModel.gameState == .finish ? playAgain() : viewModel.goToCoinSelection()
     }
-    
 
     // MARK: - Functions
     func setupUI() {
-        navigationController?.navigationBar.isHidden = true
         switch viewModel.gameState {
         case .addPlayers:
-            titlePlayButtonLabel.text = "JUGAR"
+            playOrPlayAgainLabel.text = "JUGAR"
         case .playing:
-            titlePlayButtonLabel.text = "SIGUIENTE RONDA"
+            playOrPlayAgainLabel.text = "SIGUIENTE RONDA"
         case .finish:
-            playersTableView.isHidden = true
-            winOrPayView.isHidden = false
-            winOrPayLabel.text = "Te toca pagar Adrián"
+            playersTableView.isHidden.toggle()
+            winOrPayView.isHidden.toggle()
+            winOrPayLabel.text = "Te toca pagar \(viewModel.getLoser())"
             winOrPayLabel.textColor = .yaleBlue
             winOrPayLabel.font = .robotoMedium(with: 24)
-            titlePlayButtonLabel.text = "VOLVER AL MENÚ"
-            titlePlayButtonLabel.textColor = .yaleBlue
+            playOrPlayAgainLabel.text = "VOLVER A JUGAR"
+            playOrPlayAgainLabel.textColor = .yaleBlue
         }
-        roundView.layer.cornerRadius = 6
-        roundView.backgroundColor = .goldenYellow
-        roundLabel.textColor = .yaleBlue
-        roundLabel.font = .robotoBold(with: 20)
+        
+        playOrPlayAgainView.layer.cornerRadius = 6
+        playOrPlayAgainView.backgroundColor = .goldenYellow
+        playOrPlayAgainLabel.textColor = .yaleBlue
+        playOrPlayAgainLabel.font = .robotoBold(with: 20)
+    }
+
+    func disablePlayButton() {
+        playOrPlayAgainButton.isEnabled = false
+        playOrPlayAgainView.layer.opacity = 0.5
+        playOrPlayAgainLabel.layer.opacity = 0.5
+    }
+
+    func enablePlayButton() {
+        playOrPlayAgainButton.isEnabled = true
+        playOrPlayAgainView.layer.opacity = 1
+        playOrPlayAgainLabel.layer.opacity = 1
+    }
+
+    func setupBindings() {
+        viewModel.showAlertExistingPlayer = {
+            DispatchQueue.main.async { [weak self] in
+                guard let self else { return }
+                showAlertExistingPlayer()
+            }
+        }
+        viewModel.reloadInGameSectionTable = {
+            DispatchQueue.main.async { [weak self] in
+                guard let self else { return }
+                playersTableView.reloadSections(IndexSet(integer: 2), with: .automatic)
+            }
+        }
+        viewModel.reloadTotalCoinSectionTable = {
+            DispatchQueue.main.async { [weak self] in
+                guard let self else { return }
+                let indexPath = IndexPath(row: 0, section: 1)
+                playersTableView.reloadRows(at: [indexPath], with: .automatic)
+            }
+        }
+        viewModel.enabledOrDisabledPlayButton = { isEnabled in
+            DispatchQueue.main.async { [weak self] in
+                guard let self else { return }
+                isEnabled ? enablePlayButton() : disablePlayButton()
+            }
+        }
     }
 
     func configureTableView() {
@@ -68,6 +110,26 @@ class ListPlayersViewController: UIViewController {
         playersTableView.register(UINib(nibName: "PlayerTableViewCell", bundle: nil), forCellReuseIdentifier: "PlayerTableViewCell")
         playersTableView.register(UINib(nibName: "TotalCoinsTableViewCell", bundle: nil), forCellReuseIdentifier: "TotalCoinsTableViewCell")
         playersTableView.register(UINib(nibName: "AddPlayerTableViewCell", bundle: nil), forCellReuseIdentifier: "AddPlayerTableViewCell")
+    }
+
+    func configureNavigation() {
+        self.navigationItem.title = "PUNYET"
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedString.Key.font: UIFont.robotoBold(with: 20), NSAttributedString.Key.foregroundColor: UIColor.yaleBlue ]
+        self.navigationItem.backBarButtonItem?.isHidden = true
+    }
+
+    func playAgain() {
+        viewModel.resetGame()
+        playersTableView.isHidden.toggle()
+        winOrPayView.isHidden.toggle()
+        setupUI()
+        playersTableView.reloadData()
+    }
+
+    func showAlertExistingPlayer() {
+        let alert = UIAlertController(title: "Nombre existente", message: "El nombre ya esta en la lista, por favor selecciona otro", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -82,7 +144,7 @@ extension ListPlayersViewController: UITableViewDelegate, UITableViewDataSource 
         case .inGame:
             return viewModel.getPlayers(are: .playing).count
         case .classified:
-            return viewModel.getPlayers(are: .cassified).count
+            return viewModel.getPlayers(are: .classified).count
         }
     }
     
@@ -90,7 +152,7 @@ extension ListPlayersViewController: UITableViewDelegate, UITableViewDataSource 
         switch viewModel.sections[indexPath.section] {
         case .addPlayer:
             let cell = playersTableView.dequeueReusableCell(withIdentifier: "AddPlayerTableViewCell", for: indexPath) as! AddPlayerTableViewCell
-            cell.setupCell()
+            cell.setupCell(delegate: viewModel as! AddPlayerTableViewCellDelegate)
             return cell
         case .totalCoins:
             let cell = playersTableView.dequeueReusableCell(withIdentifier: "TotalCoinsTableViewCell", for: indexPath) as! TotalCoinsTableViewCell
@@ -99,12 +161,12 @@ extension ListPlayersViewController: UITableViewDelegate, UITableViewDataSource 
         case .inGame:
             let cell = playersTableView.dequeueReusableCell(withIdentifier: "PlayerTableViewCell", for: indexPath) as! PlayerTableViewCell
             let player = viewModel.getPlayers(are: .playing)[indexPath.row]
-            cell.setupCell(player: player, indexPlayer: indexPath.row, statePlayer: .playing, gameState: viewModel.gameState)
+            cell.setupCell(player: player, indexPlayer: indexPath.row, statePlayer: .playing, gameState: viewModel.gameState,delegate: viewModel as! PlayerTableViewCellDelegate)
             return cell
         case .classified:
             let cell = playersTableView.dequeueReusableCell(withIdentifier: "PlayerTableViewCell", for: indexPath) as! PlayerTableViewCell
-            let player = viewModel.getPlayers(are: .cassified)[indexPath.row]
-            cell.setupCell(player: player, indexPlayer: indexPath.row, statePlayer: .cassified, gameState: viewModel.gameState)
+            let player = viewModel.getPlayers(are: .classified)[indexPath.row]
+            cell.setupCell(player: player, indexPlayer: indexPath.row, statePlayer: .classified, gameState: viewModel.gameState,delegate: viewModel as! PlayerTableViewCellDelegate)
             return cell
         }
     }
