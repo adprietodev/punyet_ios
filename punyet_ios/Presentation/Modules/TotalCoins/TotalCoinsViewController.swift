@@ -27,6 +27,7 @@ class TotalCoinsViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         configureNavigation()
+        setupGesture()
     }
 
     // MARK: - IBActions
@@ -73,6 +74,15 @@ class TotalCoinsViewController: UIViewController {
         playersButtonLabel.text = "JUGADORES"
         playersButtonLabel.font = .robotoBold(with: 20)
         
+    }
+
+    func setupGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     func markPlayersAsNotWinners() {

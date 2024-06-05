@@ -27,6 +27,7 @@ class ListPlayersViewController: UIViewController {
         configureTableView()
         setupBindings()
         disablePlayButton()
+        setupGesture()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -62,6 +63,15 @@ class ListPlayersViewController: UIViewController {
         playOrPlayAgainView.backgroundColor = .goldenYellow
         playOrPlayAgainLabel.textColor = .yaleBlue
         playOrPlayAgainLabel.font = .robotoBold(with: 20)
+    }
+
+    func setupGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     func disablePlayButton() {
