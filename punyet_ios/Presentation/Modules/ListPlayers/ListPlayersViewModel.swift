@@ -13,16 +13,14 @@ class ListPlayersViewModel: ListPlayersViewModelProtocol {
     var gameState: GameState
     var sections = [TypeCell]()
     var players = [Player]()
+    var showAlertExistingPlayer: (() -> Void)?
+    var reloadInGameSectionTable: (() -> Void)?
+    var reloadTotalCoinSectionTable: (() ->  Void)?
+    var enabledOrDisabledPlayButton: ((Bool) -> Void)?
 
     init(router: ListPlayersRouterProtocol, gameState: GameState) {
         self.router = router
         self.gameState = gameState
-        players = [
-            Player(name: "Adrián", statePlayer: .playing),
-            Player(name: "Ruben", statePlayer: .playing),
-            Player(name: "Miguel", statePlayer: .cassified),
-            Player(name: "Demetrio", statePlayer: .cassified)
-        ]
     }
 
     //MARK: - Functions
@@ -47,5 +45,38 @@ class ListPlayersViewModel: ListPlayersViewModelProtocol {
 
     func goToCoinSelection() {
         router.goToCoinSelection(players: players)
+    }
+
+    func getLoser() -> String {
+        guard let nameLoser = players.first(where: {$0.statePlayer == .playing})?.name else {
+            return ""
+        }
+        return nameLoser
+    }
+
+    func resetGame() {
+        gameState = .addPlayers
+        configureData()
+        players.forEach({
+            $0.statePlayer = .playing
+            $0.totalNumberCoins = nil
+            $0.totalNumberOfCoinsWasClassified = nil
+        })
+    }
+}
+
+extension ListPlayersViewModel: AddPlayerTableViewCellDelegate, PlayerTableViewCellDelegate {
+    func addPlayer(with name: String) {
+        !players.contains(where: {$0.name.lowercased() == name.lowercased()}) ? players.append(Player(name: name, statePlayer: .playing)) : showAlertExistingPlayer?()
+        reloadInGameSectionTable?()
+        reloadTotalCoinSectionTable?()
+        players.count >= 2 ? enabledOrDisabledPlayButton?(true) : enabledOrDisabledPlayButton?(false)
+    }
+    
+    func removePlayer(with index: Int) {
+        players.remove(at: index)
+        reloadInGameSectionTable?()
+        reloadTotalCoinSectionTable?()
+        players.count < 2 ? enabledOrDisabledPlayButton?(false) : enabledOrDisabledPlayButton?(true)
     }
 }

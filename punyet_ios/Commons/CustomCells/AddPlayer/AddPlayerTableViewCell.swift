@@ -8,9 +8,20 @@
 import UIKit
 
 class AddPlayerTableViewCell: UITableViewCell {
+    // MARK: - IBOutlet
     @IBOutlet weak var addPlayerTextField: UITextField!
     @IBOutlet weak var addPlayerLabel: UILabel!
     @IBOutlet weak var addPlayerView: UIView!
+
+    // MARK: - Properties
+    weak var delegate: AddPlayerTableViewCellDelegate?
+
+    // MARK: - IBActions
+    @IBAction func addPlayer(_ sender: Any) {
+        guard let name = addPlayerTextField.text, !name.isEmpty else { return }
+        delegate?.addPlayer(with: name)
+        addPlayerTextField.text = ""
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +35,8 @@ class AddPlayerTableViewCell: UITableViewCell {
     }
 
     //TODO: - Delegate
-    func setupCell() {
+    func setupCell(delegate: AddPlayerTableViewCellDelegate) {
+        self.delegate = delegate
         addPlayerView.layer.cornerRadius = 6
         addPlayerView.backgroundColor = .yaleBlue
         addPlayerLabel.textColor = .white

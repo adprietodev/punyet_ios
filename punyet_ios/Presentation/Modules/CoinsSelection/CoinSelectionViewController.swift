@@ -23,12 +23,13 @@ class CoinSelectionViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupCollectionView()
+        configureNavigation()
     }
 
     // MARK: - IBActions
     @IBAction func nextPlayer(_ sender: Any) {
         if nextAndFinishLabel.text == "FINALIZAR" {
-            // TODO: - Go to total coins
+            viewModel.goToTotalCoins()
         } else {
             namePlayerLabel.text = viewModel.getNamePlayer()
             guard let namePlayer = namePlayerLabel.text else { return }
@@ -68,6 +69,12 @@ class CoinSelectionViewController: UIViewController {
         nextAndFinishButton.isEnabled = true
         nextAndFinishView.layer.opacity = 1
         nextAndFinishLabel.layer.opacity = 1
+    }
+
+    func configureNavigation() {
+        self.navigationItem.title = "PUNYET"
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedString.Key.font: UIFont.robotoBold(with: 20), NSAttributedString.Key.foregroundColor: UIColor.yaleBlue ]
+        self.navigationItem.hidesBackButton = true
     }
 }
 

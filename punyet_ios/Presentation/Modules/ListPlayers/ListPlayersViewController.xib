@@ -10,11 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListPlayersViewController" customModule="punyet_ios" customModuleProvider="target">
             <connections>
+                <outlet property="playOrPlayAgainButton" destination="xs2-o6-oaF" id="0AL-SK-GI3"/>
+                <outlet property="playOrPlayAgainLabel" destination="g8C-cR-wgM" id="FS8-E7-KQ6"/>
+                <outlet property="playOrPlayAgainView" destination="roC-eV-rpf" id="ZQE-ak-efc"/>
                 <outlet property="playersTableView" destination="2tQ-IT-yv7" id="DGH-Wv-WmJ"/>
-                <outlet property="roundLabel" destination="g8C-cR-wgM" id="rRZ-gV-Lel"/>
-                <outlet property="roundView" destination="roC-eV-rpf" id="3oO-W7-pK4"/>
-                <outlet property="titlePlayButtonLabel" destination="g8C-cR-wgM" id="FS8-E7-KQ6"/>
-                <outlet property="titlePlayButtonView" destination="roC-eV-rpf" id="ZQE-ak-efc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="winOrPayImageView" destination="Ajd-iE-sGw" id="tni-zB-vVj"/>
                 <outlet property="winOrPayLabel" destination="m8k-7o-VsC" id="QiA-v3-3zw"/>
@@ -47,7 +46,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="361" height="42"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <connections>
-                                        <action selector="playOrNewPlayers:" destination="-1" eventType="touchUpInside" id="KIX-Mi-91z"/>
+                                        <action selector="playOrPlayAgain:" destination="-1" eventType="touchUpInside" id="KIX-Mi-91z"/>
                                     </connections>
                                 </button>
                             </subviews>

@@ -14,8 +14,9 @@ protocol CoinSelectionViewModelProtocol {
     func getNamePlayer() -> String
     func setTotalNumberCoinsAtCurrentPlayer(number: Int)
     func isLastPlayerInGame(_ player: String) -> Bool
+    func goToTotalCoins()
 }
 
 protocol CoinSelectionRouterProtocol {
-    
+    func goToTotalCoins(players: [Player])
 }

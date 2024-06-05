@@ -30,8 +30,8 @@ class NumberCollectionViewCell: UICollectionViewCell {
         numberLabel.textColor = .royalAzure
         numberLabel.layer.opacity = numberCoin.isSelected ? 0.5 : 1
         numberLabel.font = .robotoBold(with: 32)
-        numberContainerView.layer.borderColor  = numberCoin.isSelected ? UIColor.customLightGray.cgColor : UIColor.royalAzure.cgColor
-        numberContainerView.backgroundColor = numberCoin.isSelected ? .customLightGray : .white
+        numberContainerView.layer.borderColor  = numberCoin.isSelected ? UIColor.customGray.cgColor : UIColor.royalAzure.cgColor
+        numberContainerView.backgroundColor = numberCoin.isSelected ? .customGray : .white
         numberContainerView.layer.cornerRadius = 6
         numberContainerView.layer.borderWidth = numberCoin.isSelected ? 0 : 1
     }
