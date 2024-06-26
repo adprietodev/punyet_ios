@@ -11,6 +11,7 @@
 		CC267B8F2C0A213200CF4523 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC267B8E2C0A213200CF4523 /* SceneDelegate.swift */; };
 		CC267B962C0A213300CF4523 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC267B952C0A213300CF4523 /* Assets.xcassets */; };
 		CC267B992C0A213300CF4523 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CC267B982C0A213300CF4523 /* Base */; };
+		CC295DCB2C2C2B4400B1E19E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC295DCA2C2C2B4400B1E19E /* Array.swift */; };
 		CC5BC5412C0EFFAE00936ABE /* CoinSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5BC53F2C0EFFAE00936ABE /* CoinSelectionViewController.swift */; };
 		CC5BC5422C0EFFAE00936ABE /* CoinSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC5BC5402C0EFFAE00936ABE /* CoinSelectionViewController.xib */; };
 		CC5BC5442C0F012B00936ABE /* CoinSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5BC5432C0F012B00936ABE /* CoinSelectionViewModel.swift */; };
@@ -53,6 +54,7 @@
 		CC267B952C0A213300CF4523 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC267B982C0A213300CF4523 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC267B9A2C0A213300CF4523 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC295DCA2C2C2B4400B1E19E /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		CC5BC53F2C0EFFAE00936ABE /* CoinSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSelectionViewController.swift; sourceTree = "<group>"; };
 		CC5BC5402C0EFFAE00936ABE /* CoinSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinSelectionViewController.xib; sourceTree = "<group>"; };
 		CC5BC5432C0F012B00936ABE /* CoinSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSelectionViewModel.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				CCD2E3582C0DF94300071AB8 /* Font.swift */,
+				CC295DCA2C2C2B4400B1E19E /* Array.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				CC5BC54E2C0F070700936ABE /* NumberCollectionViewCell.swift in Sources */,
 				CCD2E3512C0DF38400071AB8 /* TotalCoinsTableViewCell.swift in Sources */,
 				CCEE29632C10432600A5DAC6 /* TotalCoinsRouter.swift in Sources */,
+				CC295DCB2C2C2B4400B1E19E /* Array.swift in Sources */,
 				CCD2E33F2C0DD3E000071AB8 /* ListPlayersRouter.swift in Sources */,
 				CCD2E3372C0DCC4200071AB8 /* ListPlayersViewController.swift in Sources */,
 				CCD2E3562C0DF46F00071AB8 /* PlayerTableViewCell.swift in Sources */,

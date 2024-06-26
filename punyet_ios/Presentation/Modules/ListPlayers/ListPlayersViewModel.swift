@@ -40,7 +40,8 @@ class ListPlayersViewModel: ListPlayersViewModelProtocol {
     }
 
     func getTotalCoins() -> Int {
-        players.count * 3
+        let playersInGameCount = players.filter { $0.statePlayer == .playing }.count
+        return playersInGameCount * 3
     }
 
     func goToCoinSelection() {
@@ -62,6 +63,10 @@ class ListPlayersViewModel: ListPlayersViewModelProtocol {
             $0.totalNumberCoins = nil
             $0.totalNumberOfCoinsWasClassified = nil
         })
+    }
+
+    func changePlayerTurn() {
+        players.moveFirstElementToEnd()
     }
 }
 
