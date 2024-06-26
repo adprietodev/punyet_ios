@@ -48,6 +48,7 @@ class ListPlayersViewController: UIViewController {
         case .addPlayers:
             playOrPlayAgainLabel.text = "JUGAR"
         case .playing:
+            viewModel.changePlayerTurn()
             playOrPlayAgainLabel.text = "SIGUIENTE RONDA"
         case .finish:
             playersTableView.isHidden.toggle()

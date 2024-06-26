@@ -20,6 +20,7 @@ protocol ListPlayersViewModelProtocol {
     func goToCoinSelection()
     func getLoser() -> String
     func resetGame()
+    func changePlayerTurn()
 }
 
 protocol ListPlayersRouterProtocol {
