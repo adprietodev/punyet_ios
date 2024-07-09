@@ -24,4 +24,8 @@ class Player {
         self.statePlayer = statePlayer
         self.totalNumberOfCoinsWasClassified = nil
     }
+    
+    func clearTotalNumberCoins() {
+        totalNumberCoins = nil
+    }
 }

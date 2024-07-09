@@ -52,7 +52,7 @@ class CoinSelectionViewModel: CoinSelectionViewModelProtocol {
     func setTotalNumberCoinsAtCurrentPlayer(number: Int) {
         if players[currentIndexPlayer].totalNumberCoins != nil {
             for (index,numberCoin) in numbersCoin.enumerated() {
-                if numberCoin.number == players[indexNextPlayer-1].totalNumberCoins {
+                if numberCoin.number == players[currentIndexPlayer].totalNumberCoins {
                     numbersCoin[index].isSelected = false
                 }
             }
