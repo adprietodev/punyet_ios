@@ -28,6 +28,7 @@ class TotalCoinsViewModel: TotalCoinsViewModelProtocol {
 
     func goToListPlayers() {
         let gameState = players.filter({$0.statePlayer == .playing}).count == 1 ? GameState.finish : GameState.playing
+        players.forEach { $0.clearTotalNumberCoins() }
         router.goToListPlayers(gameState: gameState)
     }
 }
