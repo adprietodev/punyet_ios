@@ -66,7 +66,9 @@ class ListPlayersViewModel: ListPlayersViewModelProtocol {
     }
 
     func changePlayerTurn() {
-        players.moveFirstElementToEnd()
+        repeat {
+            players.moveFirstElementToEnd()
+        } while players.first?.statePlayer == .classified
     }
 }
 
